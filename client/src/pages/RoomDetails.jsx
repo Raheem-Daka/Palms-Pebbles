@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { assets, facilityIcons, roomCommonData, roomsDummyData } from '../assets/assets';
 import StarRating from '../components/StarRating';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const RoomDetails = () => {
 
@@ -119,12 +121,12 @@ const RoomDetails = () => {
                         <p>Call</p>
                     </button>
                 </a> 
-                <Link to="http://gmail.com/palmsandpebbles" target="_blank">
+                <a href="mailto:palmsandpebblesreservations@gmail.com" target="_blank">
                     <button className="text-white flex flex-row justify-center gap-2 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
                         <img src={assets.email} alt="Email Icon" className=" w-5 h-5" />
                         <p className="text-">Email</p>
                     </button>
-                </Link> 
+                </a> 
 
             </div>
         </div>
