@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import palms_logo from "../assets/palms_logo.png"
 import { Link } from 'react-router-dom';
+import { assets } from '../assets/assets';
 
 const Footer = () => {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -62,11 +63,13 @@ const Footer = () => {
 
                   <div class="w-full md:w-[45%] lg:w-[15%] flex flex-col items-center md:items-start text-center md:text-left">
                       <h3 class='font-medium underline font-playfair'>Social Links</h3>
-                      <div class="flex flex-col gap-2 mt-6">
-                          <a href="#" class='hover:transition transition-colors font-playfair'>Twitter</a>
-                          <a href="#" class='hover:transition transition-colors font-playfair'>Instagram</a>
-                          <a href="#" class='hover:transition transition-colors font-playfair'>Youtube</a>
-                          <a href="#" class='hover:transition transition-colors font-playfair'>Linkedin</a>
+                        <div class="flex flex-col gap-2 mt-6">
+                        <Link to="" class='flex gap-1 items-center hover:transition transition-colors font-playfair'>
+                        <img src={assets.twitterIcon} alt="Twitter Icon" className="gap-2" />Twitter</Link>
+                          <Link to="" class='flex gap-1 items-center hover:transition transition-colors font-playfair'>
+                          <img src={assets.instagramIcon} alt="Instagram Icon"/>Instagram</Link>
+                          <Link to="" class='flex gap-1 items-center hover:transition transition-colors font-playfair'>
+                            <img src={assets.facebookIcon} alt="Facebook Icon" />Facebook</Link>
                       </div>
                   </div>
 

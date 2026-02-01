@@ -92,7 +92,7 @@ const AllRooms = ({room,}) => {
               key={room?._id}
               src={room?.images[0]} 
               alt="Room Image" title="View Room Details" 
-              className="max-h-65 md:w-1/2 rounded-xl shadow-lg object-cover cursor-pointer" 
+              className="max-h-65 w-1/2 rounded-xl shadow-lg object-cover cursor-pointer" 
               onClick={()=> {navigate(`/rooms/${room?._id}`);scrollTo(0,0)}}/>
               <div>
                 <p onClick={()=> {navigate(`/rooms/${room?._id}`);scrollTo(0,0)}} className="text-gray-800 text-2xl font-Playfair cursor-pointer font-playfair">{room?.name}</p>
@@ -153,43 +153,6 @@ const AllRooms = ({room,}) => {
           </button>
         </div>
 
-      </div>
-      {/* Filters */}
-      <div className="
-        top-28 right-0 w-80 bg-gray-50 border border-gray-300 text-gray-600 pb-5 hidden lg:block bg-gray-50 w-80 border border-gray-300 text-gray-600 max-lg:mb-8 min-lg:mt-16 pb-5">
-        <div className={`flex items-center justify-between px-5 py-2.5 min-lg:border-b border-gray-300 ${openFilters && "border-b"}`}>
-          <p className="text-base font-medium text-gray-800">Filters</p>
-          <div className="text-xs cursor-pointer">
-            <span onClick={()=> setOpenFilters(!openFilters)} className="lg:hidden">{openFilters ? "Hide" : "Show"}</span>
-            <span className="hidden lg:block">Clear</span>
-          </div>
-        </div>
-
-        <div className={`${openFilters ? "h-auto" : "h-0 lg:h-auto"} overflow-hidden transition-all duration-700`}>
-          {/* Checkbox */}
-          <div className="px-5 pt-5">
-            <p className="font-medium text-gray-700 pb-2">Popular Filters</p>
-            {roomTypes.map((room, index)=>(
-              <CheckBox key={index} label={room} />
-            ))}
-          </div>
-
-          {/* Radiobutton */}
-          <div className="px-5 pt-5">
-            <p className="font-medium text-gray-700 pb-2">Price Range</p>
-            {priceRange.map((range, index)=>(
-              <CheckBox key={index} label={`$ ${range}`} />
-            ))}
-          </div>
-
-          {/* Checkbox */}
-          <div className="px-5 pt-5">
-            <p className="font-medium text-gray-700 pb-2">Popular Filters</p>
-            {sortOptions.map((option, index)=>(
-              <RadioButton key={index} label={option} />
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   )

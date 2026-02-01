@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { assets, facilityIcons, roomCommonData, roomsDummyData } from '../assets/assets';
 import StarRating from '../components/StarRating';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 
 const RoomDetails = () => {
 
@@ -110,20 +108,20 @@ const RoomDetails = () => {
             {/*Whatsapp Button*/}
             <div className="w-full flex justify-between md:flex-row md:gap-3 md:items-center lg:flex-row">
                 <Link to="http://wa.me/+26778337064" target="_blank">
-                    <button className="text-white flex flex-row justify-center gap-2 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
-                    <img src={assets.whatsapp} alt="WhatsApp Icon" className="text-white w-5 h-5" />
+                    <button className="text-white flex flex-row justify-center gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
+                    <img src={assets.whatsapp} alt="WhatsApp Icon" className="w-6 h-6" />
                         <p>WhatsApp</p>
                     </button>
                 </Link> 
                 <a href="tel:+265996904765" target="_blank">
-                    <button className="text-white flex flex-row justify-center gap-2 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
-                    <img src={assets.phone} alt="Phone Icon" className="text-white w-5 h-5" />
+                    <button className="text-white flex flex-row justify-center gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
+                    <img src={assets.Phone} alt="Phone Icon" className="w-6 h-6" />
                         <p>Call</p>
                     </button>
                 </a> 
                 <a href="mailto:palmsandpebblesreservations@gmail.com" target="_blank">
-                    <button className="text-white flex flex-row justify-center gap-2 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
-                        <img src={assets.email} alt="Email Icon" className=" w-5 h-5" />
+                    <button className="text-white flex flex-row justify-center gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
+                        <img src={assets.email} alt="Email Icon" className="w-6 h-6" />
                         <p className="text-">Email</p>
                     </button>
                 </a> 
