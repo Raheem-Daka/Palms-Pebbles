@@ -3,12 +3,12 @@
     {
       "src": "client/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }   // ← Optional but explicit (matches your vite.config.js)
+      "config": { "distDir": "dist" }
     }
   ],
   "rewrites": [
     {
-      "source": "/(.*)",                // "source" is the preferred modern key (but "src" works)
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
