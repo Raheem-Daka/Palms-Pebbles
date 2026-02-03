@@ -105,8 +105,8 @@ const RoomDetails = () => {
             </h1>
             <p className="text-white font-playfair mb-5">contact Palms & Pebbles manager via:</p>
 
-            {/*Whatsapp Button*/}
-            <div className="w-full flex justify-between md:flex-row md:gap-3 md:items-center lg:flex-row">
+            {/*contact Buttons*/}
+            <div className="w-full flex sm:flex-col  justify-between md:flex-row md:gap-3 md:items-center lg:flex-row">
                 <Link to="http://wa.me/+26778337064" target="_blank">
                     <button className="text-white flex flex-row justify-center gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
                     <img src={assets.whatsapp} alt="WhatsApp Icon" className="w-6 h-6" />
