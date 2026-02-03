@@ -8,9 +8,7 @@
   ],
  {
   "rewrites": [
-    { "source": "/rooms", "destination": "/rooms" },
-    { "source": "/gallery", "destination": "/gallery" },
-    { "source": "/about", "destination": "/about" }
+    { "source": "/(.*)", "destination": "/" },
   ],
 },
   
