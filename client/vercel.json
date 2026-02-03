@@ -6,12 +6,14 @@
       "config": { "distDir": "dist" }
     }
   ],
+ {
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
+    { "source": "/rooms", "destination": "/rooms" },
+    { "source": "/gallery", "destination": "/gallery" },
+    { "source": "/about", "destination": "/about" }
   ],
+},
+  
   "headers": [
     {
       "source": "/(.*)",
