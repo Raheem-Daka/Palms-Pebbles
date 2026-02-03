@@ -98,14 +98,16 @@ const RoomDetails = () => {
         </div>
 
         
-        <div className="flex flex-col items-center md:items-center mt-10 justify-between bg-gray-800 shadow-[0px_0px_20px_rgb(0,0,0,0.15)] p-6 rounded-xl mx-auto mt-16 max-w-5xl">
+        <div className="lg:flex lg:flex-col items-center md:items-center mt-10 justify-between bg-gray-800 shadow-[0px_0px_20px_rgb(0,0,0,0.15)] p-6 rounded-xl mx-auto mt-16 max-w-5xl">
+            <div classname="w-full flex flex-">
+                <h1 className="text-white text-2xl font-playfair ">
+                    Book Now
+                </h1>
+                <p className="text-white font-playfair mb-5">contact Palms & Pebbles manager via:</p>
+            </div>
+            
 
-            <h1 className="text-white text-2xl font-playfair ">
-                Book Now
-            </h1>
-            <p className="text-white font-playfair mb-5">contact Palms & Pebbles manager via:</p>
-
-            {/*contact Buttons*/}
+            {/*Contact Buttons*/}
             <div className="w-full flex sm:flex-col  justify-between md:flex-row md:gap-3 md:items-center lg:flex-row">
                 <Link to="http://wa.me/+26778337064" target="_blank">
                     <button className="text-white flex flex-row justify-center gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
