@@ -11,9 +11,16 @@ const RoomDetails = () => {
 
     useEffect(()=>{
         const room = roomsDummyData.find((room)=>(room._id === id))
-        room && setRoom(room)
-        room && setMainImage(room.images[0])
-    }, [])
+        if (room) {
+            setRoom(room);
+            setMainImage(room.images[0]);
+        } 
+   
+        fetch("http://localhost:5000/api/rooms")
+          .then(res => res.json())
+          .then(data => console.log(data));
+      }, [id]);
+      
     
   return room && (
     <div className="py-28 md:py-35 px-4 md:px-16 lg:px-24 xl:px-32">
@@ -46,7 +53,7 @@ const RoomDetails = () => {
         {/* Other Room Images */}
         <div className="grid grid-cols-2 gap-4 lg:w-1/2 w-full">
             {room?.images?.length > 1 &&
-            room.images.slice(0).map((image) => (
+            room.images.map((image) => (
                 <div
                 key={image}
                 onClick={() => setMainImage(image)}
@@ -68,9 +75,9 @@ const RoomDetails = () => {
         <div className="flex flex-col md:flex-col md:justify-between mt-10 lg:flex-row">
             <div className="flex flex-col">
                 <h1 className="text-3xl md:text-4xl font-playfair">Experience A Stay That Exceeds Expectations</h1>
-                <div className="flex flex-wrap item-center mt-3 mb-6 gap-4">
+                <div className="flex flex-wrap items-center mt-3 mb-6 gap-4">
                     {room.amenities.map((item, index)=>(
-                        <div className="flex item-center gap-2 px-3 py-2 rounded-lg bg-gray-100">
+                        <div key={item} className="flex item-center gap-2 px-3 py-2 rounded-lg bg-gray-100">
                             <img src={facilityIcons[item]} alt={item} className="w-5"/>
                             <p className="text-xs">{item}</p>
                         </div>
@@ -98,7 +105,7 @@ const RoomDetails = () => {
         </div>
 
         
-        <div className="flex flex-col items-center md:items-center mt-10 justify-between bg-gray-800 shadow-[0px_0px_20px_rgb(0,0,0,0.15)] p-6 rounded-xl mx-auto mt-16 max-w-5xl">
+        <div className="flex flex-col items-center md:items-center mt-10 justify-between bg-gray-800 shadow-[0px_0px_20px_rgb(0,0,0,0.15)] p-6 rounded-xl mx-auto max-w-5xl">
 
             <h1 className="text-white text-2xl font-playfair ">
                 Book Now
@@ -107,12 +114,12 @@ const RoomDetails = () => {
 
             {/*Whatsapp Button*/}
             <div className="w-full flex justify-between md:flex-row md:gap-3 md:items-center lg:flex-row">
-                <Link to="http://wa.me/+26778337064" target="_blank">
+                <a to="http://wa.me/+26778337064" target="_blank">
                     <button className="text-white flex flex-row justify-center gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
                     <img src={assets.whatsapp} alt="WhatsApp Icon" className="w-6 h-6" />
                         <p>WhatsApp</p>
                     </button>
-                </Link> 
+                </a> 
                 <a href="tel:+265996904765" target="_blank">
                     <button className="text-white flex flex-row justify-center gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
                     <img src={assets.Phone} alt="Phone Icon" className="w-6 h-6" />

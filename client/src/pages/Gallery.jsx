@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { photos } from "../assets/assets";
 
 const Gallery = () => {
@@ -20,6 +20,13 @@ const Gallery = () => {
   const prevPage = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/gallery")
+      .then(res => res.json())
+      .then(data => console.log(data));
+  }, []);
+  
 
   return (
     <div className="pt-30">

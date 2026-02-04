@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa"; // Import correct icons
 
@@ -39,6 +39,12 @@ const Contact = () => {
       });
   };
 
+  useEffect(() => {
+    fetch("http://localhost:5000/api/contact")
+      .then(res => res.json())
+      .then(data => console.log(data));
+  }, []);
+  
   return (
     <div className="min-h-screen flex items-center justify-center mx-auto px-5">
       <div className="w-full lg:max-w-4xl md:max-w-md shadow-[0px_0px_20px_rgb(0,0,0,0.15)] p-8 rounded-xl">

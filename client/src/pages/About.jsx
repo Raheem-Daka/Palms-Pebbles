@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    fetch("http://localhost:5000/api/about")
+      .then(res => res.json())
+      .then(data => console.log(data));
+  }, []);
+  
   return (
     <div className="pt-26 text-gray-800 font-playfair">
       {/* Hero Section */}

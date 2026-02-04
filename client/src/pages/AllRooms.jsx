@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Title from '../components/Title'
 import { assets, facilityIcons, roomsDummyData } from '../assets/assets'
 import { useNavigate } from 'react-router-dom'
@@ -23,6 +23,12 @@ const RadioButton = ({label, selected = false, onChange = ()=>{}})=>{
 }
 
 const AllRooms = ({room,}) => {
+  useEffect(() => {
+    fetch("http://localhost:5000/api/rooms")
+      .then(res => res.json())
+      .then(data => console.log(data));
+  }, []);
+  
 
   const navigate = useNavigate();
 
