@@ -12,7 +12,7 @@ app.use(
         methods: ["GET", "DELETE", "POST", "PUT"]
     })
 );
-app.use("/", pagesRoutes);
+app.use("/api", pagesRoutes);
 
 
 app.listen(5000, () => console.log("Server running on port 5000"));
