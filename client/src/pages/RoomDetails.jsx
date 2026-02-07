@@ -104,84 +104,50 @@ const RoomDetails = () => {
             ))}
         </div>
 
-        
-<<<<<<< HEAD
+        {/*Book Now Section*/}
         <div className="flex flex-col items-center md:items-center mt-10 justify-between bg-gray-800 shadow-[0px_0px_20px_rgb(0,0,0,0.15)] p-6 rounded-xl mx-auto max-w-5xl">
-=======
-        <div className="flex flex-col items-center justify-between bg-gray-800 shadow-[0px_0px_20px_rgb(0,0,0,0.15)] p-6 rounded-xl mx-auto mt-16 max-w-5xl">
->>>>>>> 3602020965434c94a8e35e5d6c66a8ef646069c7
-
           <div className="w-full flex flex-col">
-            <h1 className="text-white text-2xl font-playfair">
-              Book Now
-            </h1>
-<<<<<<< HEAD
-            <p className="text-white font-playfair mb-5">contact Palms & Pebbles manager via:</p>
-
-            {/*Whatsapp Button*/}
-            <div className="w-full flex justify-between md:flex-row md:gap-3 md:items-center lg:flex-row">
-                <a to="http://wa.me/+26778337064" target="_blank">
-                    <button className="text-white flex flex-row justify-center gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
-                    <img src={assets.whatsapp} alt="WhatsApp Icon" className="w-6 h-6" />
-                        <p>WhatsApp</p>
-                    </button>
-                </a> 
-                <a href="tel:+265996904765" target="_blank">
-                    <button className="text-white flex flex-row justify-center gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
-                    <img src={assets.Phone} alt="Phone Icon" className="w-6 h-6" />
-                        <p>Call</p>
-                    </button>
-                </a> 
-                <a href="mailto:palmsandpebblesreservations@gmail.com" target="_blank">
-                    <button className="text-white flex flex-row justify-center gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
-                        <img src={assets.email} alt="Email Icon" className="w-6 h-6" />
-                        <p className="text-">Email</p>
-                    </button>
-                </a> 
-
+            <div className="flex flex-col items-center font-playfair">
+                <h1 className="text-white text-2xl font-playfair">
+                Book Now
+                </h1>
+                <p className="text-white font-playfair mb-5">contact Palms & Pebbles manager via:</p>
             </div>
-=======
-            <p className="text-white font-playfair mb-5">
-              Contact Palms & Pebbles manager via:
-            </p>
-          </div>
-        
-          {/* Contact Buttons */}
-          <div className="w-full flex flex-col sm:flex-col md:flex-row lg:flex-row justify-between gap-3 items-center">
-        
+
+            <div className="w-full flex flex-col md:flex-row lg:flex-row justify-between gap-4 items-center">
             {/* WhatsApp */}
             <a
-              href="https://wa.me/26778337064"
-              target="_blank"
-              rel="noopener noreferrer"
+                href="https://wa.me/26778337064"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-              <button className="text-white flex gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 hover:scale-105">
+                <button className="text-white flex gap-1 items-center border w-32 rounded-xl p-4 transition-transform duration-300 hover:scale-105">
                 <img src={assets.whatsapp} alt="WhatsApp Icon" className="w-6 h-6" />
-                <p>WhatsApp</p>
-              </button>
+                <p className="font-playfair">WhatsApp</p>
+                </button>
             </a>
-        
+
             {/* Call */}
             <a href="tel:+265996904765">
-              <button className="text-white flex gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 hover:scale-105">
+                <button className="text-white flex gap-1 items-center border w-32 rounded-xl p-4 transition-transform duration-300 hover:scale-105">
                 <img src={assets.Phone} alt="Phone Icon" className="w-6 h-6" />
-                <p>Call</p>
-              </button>
+                <p className="font-playfair">Call</p>
+                </button>
             </a>
-        
+
             {/* Email */}
             <a href="mailto:palmsandpebblesreservations@gmail.com">
-              <button className="text-white flex gap-1 items-center border w-28 rounded-xl p-4 cursor-pointer transition-transform duration-300 hover:scale-105">
+                <button className="text-white flex gap-1 items-center border w-32 rounded-xl p-4 transition-transform duration-300 hover:scale-105">
                 <img src={assets.email} alt="Email Icon" className="w-6 h-6" />
-                <p>Email</p>
-              </button>
+                <p className="font-playfair">Email</p>
+                </button>
             </a>
+            </div>
         
           </div>
->>>>>>> 3602020965434c94a8e35e5d6c66a8ef646069c7
         </div>
     </div>
   )
 }
 
-export default RoomDetails
+export default RoomDetails;
