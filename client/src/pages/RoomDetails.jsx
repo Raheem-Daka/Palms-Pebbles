@@ -16,9 +16,13 @@ const RoomDetails = () => {
             setMainImage(room.images[0]);
         } 
    
-        fetch("http://localhost:5000/api/rooms")
-          .then(res => res.json())
-          .then(data => console.log(data));
+        fetch(`${import.meta.env.VITE_API_URL}/api/rooms/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            setRoom(data);
+            setMainImage(data.images?.[0]);    
+        });
       }, [id]);
       
     

@@ -22,7 +22,7 @@ const Gallery = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/gallery")
+    fetch(`${import.meta.env.VITE_API_URL}/api/gallery`)
       .then(res => res.json())
       .then(data => console.log(data));
   }, []);
