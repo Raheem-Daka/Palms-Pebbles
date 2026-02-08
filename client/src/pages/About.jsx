@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const About = () => {
+const About = ({data}) => {
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/api/about`)
       .then(res => res.json())
