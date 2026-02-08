@@ -98,7 +98,7 @@ const AllRooms = ({room,}) => {
               key={room?._id}
               src={room?.images[0]} 
               alt="Room Image" title="View Room Details" 
-              className="max-h-65 w-1/2 rounded-xl shadow-lg object-cover cursor-pointer" 
+              className="max-h-50 w-1/2 rounded-xl shadow-lg object-cover cursor-pointer" 
               onClick={()=> {navigate(`/rooms/${room?._id}`);scrollTo(0,0)}}/>
               <div>
                 <p onClick={()=> {navigate(`/rooms/${room?._id}`);scrollTo(0,0)}} className="text-gray-800 text-2xl font-Playfair cursor-pointer font-playfair">{room?.name}</p>
@@ -120,8 +120,8 @@ const AllRooms = ({room,}) => {
                   ))}
                 </div>
                 <div className="flex justify-between">
-                <p className="text-md font-medium text-gray-700 font-playfair">$ {room?.pricePerNight} / night <span className="text-gray-500 font-playfair">(1 person)</span></p>
-                <p className="text-xl font-medium text-gray-700 font-playfair">$ {room?.pricePerNight2} / night <span className="text-gray-500 font-playfair">(2 people)</span></p>
+                <p className="text-xl font-medium text-gray-700 font-playfair">$ {room?.pricePerNight} / <span className="text-base font-playfair">night</span> <span className="text-gray-500 text-base font-playfair">(1 person)</span></p>
+                <p className="text-xl font-medium text-gray-700 font-playfair">$ {room?.pricePerNight2} / <span className="text-base font-playfair">night</span><span className="text-gray-500 text-base font-playfair">(2 people)</span></p>
                 </div>
               </div>
             </div>

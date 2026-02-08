@@ -90,8 +90,8 @@ const RoomDetails = () => {
             </div>
             {/*Room Price*/}
             <div className="flex justify-between md:justify-start gap-5">
-                <p className="text-2xl font-playfair">$ {room?.pricePerNight} / night <span className="text-gray-500 text-xl"> (1 person)</span></p>
-                <p className="text-2xl font-playfair">$ {room?.pricePerNight2} / night <span className="text-gray-500 text-xl"> (2 people)</span></p>
+                <p className="text-2xl font-playfair">$ {room?.pricePerNight} / night <span className="text-gray-500 text-xl font-playfair"> (1 person)</span></p>
+                <p className="text-2xl font-playfair">$ {room?.pricePerNight2} / night <span className="text-gray-500 text-xl font-playfair"> (2 people)</span></p>
             </div>
         </div>
 
@@ -115,7 +115,7 @@ const RoomDetails = () => {
                 <h1 className="text-white text-2xl font-playfair">
                 Book Now
                 </h1>
-                <p className="text-white font-playfair mb-5">contact Palms & Pebbles manager via:</p>
+                <p className="text-white text-base font-playfair mb-5">contact Palms & Pebbles manager via:</p>
             </div>
 
             <div className="w-full flex flex-col md:flex-row lg:flex-row justify-between gap-4 items-center">
