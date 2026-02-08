@@ -38,12 +38,6 @@ const Contact = () => {
         setLoading(false); // Reset loading state after the submission is finished
       });
   };
-
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/contact`)
-      .then(res => res.json())
-      .then(data => console.log(data));
-  }, []);
   
   return (
     <div className="min-h-screen flex items-center justify-center mx-auto px-5">

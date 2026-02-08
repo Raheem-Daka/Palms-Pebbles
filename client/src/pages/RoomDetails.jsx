@@ -15,15 +15,7 @@ const RoomDetails = () => {
             setRoom(room);
             setMainImage(room.images[0]);
         } 
-   
-        fetch(`${import.meta.env.VITE_API_URL}/api/rooms/${id}`)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            setRoom(data);
-            setMainImage(data.images?.[0]);    
-        });
-      }, [id]);
+    }, [id]);
       
     
   return room && (

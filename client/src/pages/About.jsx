@@ -1,11 +1,6 @@
 import React, { useEffect } from "react";
 
-const About = ({data}) => {
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/about`)
-      .then(res => res.json())
-      .then(data => console.log(data));
-  }, []);
+const About = () => {
   
   return (
     <div className="pt-26 text-gray-800 font-playfair">

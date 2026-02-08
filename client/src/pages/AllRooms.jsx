@@ -23,11 +23,6 @@ const RadioButton = ({label, selected = false, onChange = ()=>{}})=>{
 }
 
 const AllRooms = ({room,}) => {
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/rooms`)
-      .then(res => res.json())
-      .then(data => console.log(data));
-  }, []);
   
 
   const navigate = useNavigate();

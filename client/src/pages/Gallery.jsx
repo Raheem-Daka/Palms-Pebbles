@@ -21,11 +21,6 @@ const Gallery = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/gallery`)
-      .then(res => res.json())
-      .then(data => console.log(data));
-  }, []);
   
 
   return (
