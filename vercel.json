@@ -1,28 +1,8 @@
 {
-  "builds": [
-    {
-      "src": "client/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Set-Cookie",
-          "value": "myCookie=myValue; SameSite=None; Secure; Path=/; Expires=Thu, 31 Dec 2026 23:59:59 GMT"
-        }
-      ]
-    }
-  ]
 }
