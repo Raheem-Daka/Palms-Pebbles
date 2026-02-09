@@ -2,10 +2,14 @@
   "rewrites": [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "source": "/((?!api|_next|static|.*\\..*).*)",
       "destination": "/index.html"
 =======
       "source": "/(.*)",
+=======
+      "source": "/((?!api|_next|static|.*\\..*).*)",
+>>>>>>> 4d85eb9 (main)
       "destination": "/"
 >>>>>>> e541065 (main)
     }
