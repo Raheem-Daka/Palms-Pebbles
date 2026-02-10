@@ -3,19 +3,14 @@
     "framework": "vite",
     "rootDirectory": "client",
     "outputDirectory": "dist",
-    "builds": [
-        {
-            "src": "app.jsx",
-            "use": "@vercel/node"
-        }
-    ],
-    "rewrites": [
-        {
-            "handle": "filesystem"
-          },
-        {
-            "source": "/(.*)",
-            "destination": "index.html"
-        }
+    "routes": [
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/.*",
+        "dest": "/index.html"
+      }
     ]
-}
+  }
+  
