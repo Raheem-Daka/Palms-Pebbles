@@ -1,5 +1,8 @@
 {
     "version": 2,
+    "framework": "vite",
+    "rootDirectory": "client",
+    "outputDirectory": "dist",
     "builds": [
         {
             "src": "app.jsx",
@@ -7,6 +10,9 @@
         }
     ],
     "rewrites": [
+        {
+            "handle": "filesystem"
+          },
         {
             "source": "/(.*)",
             "destination": "index.html"
