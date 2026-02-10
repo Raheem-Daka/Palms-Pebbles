@@ -1,9 +1,18 @@
 {
     "version": 2,
-    "framework": "vite",
-    "rootDirectory": "client",
-    "outputDirectory": "dist",
+    "builds": [
+      {
+        "src": "client/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist"
+        }
+      }
+    ],
     "routes": [
+      {
+        "handle": "filesystem"
+      },
       {
         "src": "/.*",
         "dest": "/index.html"
