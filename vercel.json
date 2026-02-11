@@ -12,7 +12,7 @@
     "rewrites": [
       {
         "src": "/(.*)",
-        "destination": "/"
+        "destination": "/index.html"
       }
     ]
   }
