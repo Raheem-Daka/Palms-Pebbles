@@ -9,13 +9,13 @@
         }
       }
     ],
-    "routes": [
+    "rewrites": [
       {
         "handle": "filesystem"
       },
       {
-        "src": "/.*",
-        "dest": "/index.html"
+        "src": "/(.*)",
+        "destination": "/"
       }
     ]
   }
