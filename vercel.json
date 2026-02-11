@@ -15,6 +15,12 @@
         "destination": "/index.html"
       }
     ],
+    "routes": [
+      {      
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }   
+    ],
     "headers": [
       {
         "source": "/(.*)",
