@@ -93,7 +93,7 @@ const AllRooms = ({room,}) => {
               key={room?._id}
               src={room?.images[0]} 
               alt="Room Image" title="View Room Details" 
-              className="max-h-50 lg:w-1/2 md:1/2 sm:w-full rounded-xl shadow-lg object-cover cursor-pointer" 
+              className="max-h-50 lg:w-1/2 md:w-1/2 w-full rounded-xl shadow-lg object-cover cursor-pointer" 
               onClick={()=> {navigate(`/rooms/${room?._id}`);scrollTo(0,0)}}/>
               <div>
                 <p onClick={()=> {navigate(`/rooms/${room?._id}`);scrollTo(0,0)}} className="text-gray-800 text-2xl font-Playfair cursor-pointer font-playfair">{room?.name}</p>
