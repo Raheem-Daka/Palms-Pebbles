@@ -88,12 +88,12 @@ const AllRooms = ({room,}) => {
 
         {
           currentRooms.map((room)=> (
-            <div key={room._id} className="py-10 flex flex-col md:flex-row lg:flex-row xl:flex-row items-start gap-5 border-b border-gray-300 last:pb-20 last:border-0">
+            <div key={room._id} className="w-full py-10 flex flex-col md:flex-row lg:flex-row xl:flex-row items-start gap-5 border-b border-gray-300 last:pb-20 last:border-0">
               <img 
               key={room?._id}
               src={room?.images[0]} 
               alt="Room Image" title="View Room Details" 
-              className="max-h-[50%] w-1/2 sm:w-full rounded-xl shadow-lg object-cover cursor-pointer" 
+              className="max-h-50 w-1/2 rounded-xl shadow-lg object-cover cursor-pointer" 
               onClick={()=> {navigate(`/rooms/${room?._id}`);scrollTo(0,0)}}/>
               <div>
                 <p onClick={()=> {navigate(`/rooms/${room?._id}`);scrollTo(0,0)}} className="text-gray-800 text-2xl font-Playfair cursor-pointer font-playfair">{room?.name}</p>
