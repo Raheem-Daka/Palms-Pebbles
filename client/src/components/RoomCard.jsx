@@ -45,6 +45,11 @@ const RoomCard = ({ room }) => {
             <span className="font-playfair">{room?.address}</span>
           </div>
 
+          {/* amenitie */}
+          <div>
+            
+          </div>
+
           {/* Price and Book Now */}
           <div className="mt-4 flex justify-between items-center">
             <div className='flex justify-between flex-grow mr-5'>
@@ -55,8 +60,14 @@ const RoomCard = ({ room }) => {
                 <span className="font-playfair text-gray-800">${room.pricePerNight2} <span className="font-playfair text-gray-500"> (2 people)</span></span>
               </p>
             </div>
-            <button className="flex text-white bg-gray-800 font-playfair px-4 py-2 text-md font-medium border-2 border-transparent hover:border-gray-400 rounded-xl hover:bg-white hover:text-gray-800 cursor-pointer transition-all duration-300 ease-in-out">            
-              Book Now
+          </div>
+
+          {/*Book Now Button*/}
+          <div className="mt-2">
+            <button className="w-full md:w-auto flex items-center justify-center text-white bg-gray-800 font-playfair px-4 py-2 text-md font-medium border-2 border-transparent hover:border-gray-400 rounded-xl hover:bg-white hover:text-gray-800 cursor-pointer transition-all duration-300 ease-in-out">
+              <span className="flex items-center">
+                Book Now
+              </span>           
             </button>
           </div>
         </div>
